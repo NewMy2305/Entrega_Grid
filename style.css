@@ -111,8 +111,10 @@ h3{
 }
 
 footer{
+  display:grid;
   background-color: var(--orange-color);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-column: 2 span;
 }
 
