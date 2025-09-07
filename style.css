@@ -12,47 +12,55 @@
 
 
 .school {
+  grid-area: school;
   background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/d8ce469044b958508f4bdbab/blueschoolbackpackwithessentialsupplies_232148207678.jpg);
 }
 
 .student {
+  grid-area: student;
   background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/9e4ce16148dd5cbeb1065410/89f80abe-6acd-d8dc-a341-3e571206975b.jpg);
 }
 
 .time {
+  grid-area: time;
   background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/773a5aa425b1502aaac14708/f2b45624-c8f6-3aa0-0ee4-58adda3c89b0.jpg);
 }
 
 .alumni {
+  grid-area: alumni;
   background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/89993ff69c3e5244ad2bf1ba/blondestudentgirlissmilingholdingfoldernotebookherhandsuniversitybackground_101969664.jpg);
 }
 
-
+.alumni,
 .school,
 .student,
-.time,
-.alumni {
-  background-repeat: no-repeat;
+.time {
   background-size: cover;
   background-position: center;
 }
+
 html{
   background-color: white;
 }
 
 body{
   display: grid;
-  height: 97vh;
-  background-color: var(--primary-color);
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  height: 97vh;
+  background-color: var(--primary-color);
   gap: 28px;
   margin: 10px;
   border: var(--spacing) solid var(--primary-color);
   border-radius: 40px;
   box-sizing: border-box;
   min-width: 100vh;
+  grid-template-areas:
+  "header school student"
+  "header main time"
+  "alumni footer footer"
 }
+
 
 h1{
   color: var(--primary-color);
@@ -62,26 +70,11 @@ h1{
   grid-row-start: 1;
   text-align: center;
 }
-
 p{
   font-family: Arial, Helvetica, sans-serif;
   color: var(--primary-color);
 }
 
-.primero{
-  font-size: 20px;
-  grid-row: 3;
-  text-align: center;
-}
-
-header{
-  display: grid;
-  box-sizing: border-box;
-  grid-column: span 1;
-  grid-row: span 2;
-  grid-template-rows: repeat(4, 1fr);
-  background-color: var(--blue-color);
-}
 
 h2{
   color: var(--blue-color);
@@ -90,11 +83,12 @@ h2{
   text-align: center;
 }
 
+
 main{
+  grid-area: main;
   background-color: white;
   border: var(--border);
   border-radius: 10px;
-  display: grid;
   align-items: center;
 }
 
@@ -115,8 +109,25 @@ h3{
   margin: 1px 20px 30px;
 }
 
+
+button{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: var(--secondary-color);
+  grid-row: 3;
+  grid-column: 1;
+  padding: 30px 5px;
+  margin: 1px 10px 40px;
+}
+
+header{
+  grid-area: header;
+  box-sizing: border-box;
+  background-color: var(--blue-color);
+}
+
+
 footer{
-  display:grid;
   box-sizing: border-box;
   background-color: var(--orange-color);
   grid-template-rows: repeat(3, 1fr);
@@ -125,9 +136,6 @@ footer{
 }
 
 button{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  color: var(--secondary-color);
   grid-row: 3;
   grid-column: 1;
   padding: 30px 5px;
