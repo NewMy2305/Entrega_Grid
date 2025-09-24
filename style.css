@@ -67,9 +67,9 @@ h1{
   font-size: 50px;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
-  grid-row-start: 1;
   text-align: center;
 }
+
 p{
   font-family: Arial, Helvetica, sans-serif;
   color: var(--primary-color);
@@ -81,15 +81,17 @@ h2{
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   text-align: center;
+  grid-row-start: 2;
 }
 
 
 main{
   grid-area: main;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
   background-color: white;
   border: var(--border);
   border-radius: 10px;
-  align-items: center;
 }
 
 h3{
@@ -121,9 +123,18 @@ button{
 }
 
 header{
+  display: grid;
   grid-area: header;
   box-sizing: border-box;
   background-color: var(--blue-color);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+
+.primero{
+  text-align: center;
+  font-size: 20px;
+  grid-row: 2;
 }
 
 
@@ -138,6 +149,13 @@ footer{
 button{
   grid-row: 3;
   grid-column: 1;
-  padding: 30px 5px;
-  margin: 1px 10px 40px;
+  padding: 30px 60px;
+  margin: 1px 20px 40px;
+}
+
+
+/* Media querys */
+
+
+@media (min-width: 481px) and (max-width: 768px) {
 }
