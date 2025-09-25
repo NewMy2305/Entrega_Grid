@@ -73,6 +73,7 @@ h1{
 p{
   font-family: Arial, Helvetica, sans-serif;
   color: var(--primary-color);
+  
 }
 
 
@@ -139,6 +140,7 @@ header{
 
 
 footer{
+  grid-area: footer;
   box-sizing: border-box;
   background-color: var(--orange-color);
   grid-template-rows: repeat(3, 1fr);
@@ -159,7 +161,64 @@ button{
 
 @media (min-width: 481px) and (max-width: 768px) {
 
+body{
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  height: auto;
+  min-width: 0;
+  gap: 28px;
+  margin: 10px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  grid-template-areas:
+  "header"
+  "school"
+  "student"
+  "main"
+  "time"
+  "alumni"
+  "footer"
+}
+
+.alumni,
+.school,
+.student,
+.time {
+  min-height: 350px;
+  width: 100%;
+}
+
+footer{
+  grid-column: auto;
+}
+
+header{
+  height: 800px;
+}
+
+main{
+  height: 350px;
+  width: 100%;
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px){
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   
+}
+
 }
